@@ -1,0 +1,62 @@
+package com.cts.myProject.model;
+
+import java.time.LocalDate;
+
+public class MenuItem {
+	private int id;
+	private String name;
+	private double price;
+	private boolean available;
+	private LocalDate dateOfLaunch;
+	private String category;
+	private boolean freeDelivery;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public double getPrice() {
+		return price;
+	}
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	public boolean isAvailable() {
+		return available;
+	}
+	public void setAvailable(boolean available) {
+		this.available = available;
+	}
+	public LocalDate getDateOfLaunch() {
+		return dateOfLaunch;
+	}
+	public void setDateOfLaunch(LocalDate dateOfLaunch) {
+		this.dateOfLaunch = dateOfLaunch;
+	}
+	public String getCategory() {
+		return category;
+	}
+	public void setCategory(String category) {
+		this.category = category;
+	}
+	public boolean isFreeDelivery() {
+		return freeDelivery;
+	}
+	public void setFreeDelivery(boolean freeDelivery) {
+		this.freeDelivery = freeDelivery;
+	}
+	@Override
+	public String toString() {
+		return "MenuItem [id=" + id + ", name=" + name + ", price=" + price + ", available=" + available
+				+ ", dateOfLaunch=" + dateOfLaunch + ", category=" + category + ", freeDelivery=" + freeDelivery + "]";
+	}
+	
+
+}
