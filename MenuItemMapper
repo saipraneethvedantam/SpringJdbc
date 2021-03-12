@@ -1,0 +1,27 @@
+package com.cts.myProject.model;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.time.LocalDate;
+
+import org.springframework.jdbc.core.RowMapper;
+
+public class MenuItemMapper implements RowMapper<MenuItem>{
+
+	@Override
+	public MenuItem mapRow(ResultSet rs, int rowNum) throws SQLException {
+		// TODO Auto-generated method stub
+		MenuItem item = new MenuItem();
+		
+		item.setId(rs.getInt(1));
+		item.setName(rs.getString(2));
+		item.setPrice(rs.getDouble(3));
+		item.setAvailable(rs.getString(4).equalsIgnoreCase("Yes"));
+		item.setDateOfLaunch(LocalDate.parse(rs.getString(5)));
+		item.setCategory(rs.getString(6));
+		item.setFreeDelivery(rs.getString(7).equalsIgnoreCase("yes"));
+		
+		return item;
+	}
+
+}
